@@ -1,0 +1,24 @@
+.button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button--primary {
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: rgba(145, 85, 253, 1);
+  box-shadow: 0 0 8px -4px rgba(58, 53, 65, 0.42);
+  transition: background-color .3s ease;
+}
+
+.button--primary:hover {
+  background-color: rgba(117, 41, 253, 1);
+}
