@@ -34,6 +34,10 @@ p {
   box-shadow: 0 0 0 1px rgba(58, 53, 65, 0.23);
 }
 
+.input.error {
+  box-shadow: 0 0 0 1px rgba(251, 31, 31, 1);;
+}
+
 .input + .input {
   margin-top: 16px;
 }

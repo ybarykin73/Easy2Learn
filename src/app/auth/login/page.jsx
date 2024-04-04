@@ -1,13 +1,20 @@
 'use client'
 
+import clsx from 'clsx'
+import { useFormState } from 'react-dom'
+
 import Link from 'next/link'
 import Button from '@/app/ui/subcomponents/button/Button'
 
-import {createNewUser} from '@/app/lib/actions'
+import {loginUser} from '@/app/lib/actions'
 
 import '../auth.css'
 
 export default function page() {
+  const initialState = { message: null, errors: {} };
+  const [state, dispatch] = useFormState(loginUser, initialState)
+
+  console.log(state?.errors)
 
   return (
     <div className="auth-form">
@@ -15,10 +22,26 @@ export default function page() {
         <h1 className="auth-form__title">Войти</h1>
         <p className="auth-form__sub-title">введите ваши учетные данные</p>
       </div>
-      <form className='auth-form__body' action={createNewUser}>
+      <form className='auth-form__body' action={dispatch}>
         <div className='auth-form__main'>
-          <input className='input' name='email' type="text" />
-          <input className='input' name='password' type="password" />
+          <input className={clsx('input', {'error': state.errors?.email})} name='email' type="text" />
+          {
+            state.errors?.email &&
+            state.errors.email.map(error => (
+              <p className='auth-form__error' key={error} > 
+                { error }
+              </p>
+            ))
+          }
+          <input className={clsx('input', {'error': state.errors?.password})} name='password' type="password" />
+          {
+            state.errors?.password &&
+            state.errors.password.map(error => (
+              <p className='auth-form__error' key={error} > 
+                { error }
+              </p>
+            ))
+          }
         </div>
         <div className="auth-form__help">
           <label>
