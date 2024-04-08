@@ -51,3 +51,7 @@ export async function registrationUser(prevState, formData) {
   revalidatePath('/auth/registration')
   redirect('/auth/success')
 }
+
+export async function loginUser(){
+  return null
+}
