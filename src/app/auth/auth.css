@@ -62,6 +62,10 @@
   color: rgba(251, 31, 31, 1);
 }
 
+.auth-form__error + .auth-form__error {
+  padding-top: 0;
+}
+
 .auth-form__link {
   color:rgba(145, 85, 253, 1);
 }
