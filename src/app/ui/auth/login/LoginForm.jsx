@@ -6,11 +6,11 @@ import { useFormState } from 'react-dom'
 import Link from 'next/link'
 import Button from '@/app/ui/subcomponents/button/Button'
 
-import { loginUser } from '@/app/lib/actions'
+// import { loginUser } from '@/app/lib/actions'
 
 export default function LoginForm() {
   const initialState = { message: null, errors: {} };
-  const [state, dispatch] = useFormState(loginUser, initialState)
+  // const [state, dispatch] = useFormState(loginUser, initialState)
 
   return (
     <form className='auth-form__body' action={dispatch}>
