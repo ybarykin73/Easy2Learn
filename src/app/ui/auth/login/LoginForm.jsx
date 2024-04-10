@@ -13,6 +13,7 @@ export default function LoginForm() {
   return (
     <form className='auth-form__body' action={dispatch}>
       <div className='auth-form__main'>
+        // TODO Вынести input в отдельный компонент
         <input className='input' name='email' type="text" />
         <input className='input' name='password' type="password" />
         {
