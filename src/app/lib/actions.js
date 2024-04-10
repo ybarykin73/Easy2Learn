@@ -1,8 +1,11 @@
 'use server'
+import { signIn } from '@/auth';
+import { AuthError } from 'next-auth';
 
 import z from 'zod'
 import { sql } from '@vercel/postgres'
 import {v4 as uuidv4} from 'uuid';
+import bcrypt from 'bcrypt';
 
 import { redirect } from 'next/navigation';
 import { revalidatePath } from 'next/cache';
@@ -38,9 +41,11 @@ export async function registrationUser(prevState, formData) {
   const id = uuidv4()
 
   try {
+    const salt = await bcrypt.genSalt(10)
+    const hashPassword = await bcrypt.hash(password,salt)
     await sql`
       INSERT INTO users (id, email, password)
-      VALUES(${id}, ${email}, ${password})
+      VALUES(${id}, ${email}, ${hashPassword})
     `;
   } catch (error){
     // TODO нужно продумать как првоерять ошибки с бэка 
@@ -52,6 +57,19 @@ export async function registrationUser(prevState, formData) {
   redirect('/auth/success')
 }
 
-export async function loginUser(){
-  return null
+export async function loginUser(prevState, formData,) {
+  try {
+    await signIn('credentials', formData);
+  } catch (error) {
+    if (error instanceof AuthError) {
+      switch (error.type) {
+        case 'CredentialsSignin':
+          console.log(error.type)
+          return 'Не верный email или пароль!';
+        default:
+          return 'Something went wrong.';
+      }
+    }
+    throw error;
+  }
 }
