@@ -11,6 +11,6 @@
 
 .logo__text {
   font-size: 20px;
-  color: rgba(58, 53, 65, .87);
+  color: var(--heading-color);
   font-weight: 700;
 }

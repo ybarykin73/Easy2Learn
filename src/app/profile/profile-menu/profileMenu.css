@@ -12,7 +12,6 @@
 .profile-nav__list-item {
   padding: 5px 20px;
   font-size: 16px;
-  color: rgba(58, 53, 65, .87);
   border-radius: 0 20px 20px 0;
   transition: background-color .2s ease;
 }
