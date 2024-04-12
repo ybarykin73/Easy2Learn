@@ -2,4 +2,11 @@
   display: grid;
   grid-template-columns: 260px 1fr;
   grid-column-gap: 25px;
+
+}
+
+.profile__main {
+  padding: 30px 20px;
+  background-color: #fff;
+  box-shadow: 0 2 10 0 rgba(58, 53, 65, .1);
 }

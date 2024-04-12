@@ -7,7 +7,7 @@ export default function ProfileLayout({ children }) {
       <aside>
         <ProfileMenu />
       </aside>
-      <main>
+      <main className='profile__main'>
         {children}
       </main>
     </div>
