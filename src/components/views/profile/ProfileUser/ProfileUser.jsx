@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 
-export default function User() {
+export default function ProfileUser() {
   return (
     <div className="user">
       <Link href={'/profile'}>

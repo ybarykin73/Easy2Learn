@@ -1,5 +1,5 @@
 import Logo from "../../Logo/Logo"
-import User from "../../../app/ui/user/User"
+import User from "@/components/views/profile/ProfileUser/ProfileUser"
 
 import './Header.css'
 
