@@ -28,7 +28,7 @@ export default function LoginForm() {
           <input name='remember' type="checkbox" />
           Запомнить
         </label>
-        <Link className='auth-form__link' href="./forgot-password">Забыли пароль?</Link>
+        <Link className='auth-form__link' href="/auth/forgot-password">Забыли пароль?</Link>
       </div>
       <Button
         ariaLabel='Войти'

@@ -1,7 +1,7 @@
-export default function page() {
+import AuthFargotPassword from "@/components/views/auth/AuthFargotPassword/AuthFargotPassword"
+
+export default function Page () {
   return (
-    <div className="">
-      forgot-password
-    </div>
+    <AuthFargotPassword />
   )
 }

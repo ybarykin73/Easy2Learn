@@ -6,8 +6,8 @@ export const authConfig = {
   callbacks: {
     authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
-      const isOnDashboard = nextUrl.pathname.startsWith('/profile');
-      if (isOnDashboard) {
+      const isProfile = nextUrl.pathname.startsWith('/profile');
+      if (isProfile) {
         if (isLoggedIn) return true;
         return false;
       } else if (isLoggedIn) {
@@ -15,6 +15,13 @@ export const authConfig = {
       }
       return true;
     },
+    session: ({ session, token }) => ({
+      ...session,
+      user: {
+        ...session.user,
+        id: token.sub,
+      },
+    }),
   },
   providers: [],
 };

@@ -1,6 +1,4 @@
-import './auth.css'
-
-export default function page({children}) {
+export default function Page ({children}) {
   return (
     <div>{children}</div>
   )

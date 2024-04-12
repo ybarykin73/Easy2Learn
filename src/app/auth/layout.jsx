@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import './auth.css'
+import './AuthLayout.css'
 
 
 export default function AuthLayout({ children }) {
