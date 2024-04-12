@@ -1,5 +1,5 @@
-import Logo from "../logo/Logo"
-import User from "../user/User"
+import Logo from "../../../app/ui/logo/Logo"
+import User from "../../../app/ui/user/User"
 
 import './Header.css'
 
