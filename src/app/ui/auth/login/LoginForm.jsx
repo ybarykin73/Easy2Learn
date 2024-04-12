@@ -3,7 +3,7 @@
 import { useFormState } from 'react-dom'
 
 import Link from 'next/link'
-import Button from '@/app/ui/subcomponents/button/Button'
+import Button from '@/components/ui/button/Button'
 
 import { loginUser } from '@/app/lib/actions'
 
@@ -13,7 +13,7 @@ export default function LoginForm() {
   return (
     <form className='auth-form__body' action={dispatch}>
       <div className='auth-form__main'>
-        // TODO Вынести input в отдельный компонент
+        {/* TODO Вынести input в отдельный компонент */}
         <input className='input' name='email' type="text" />
         <input className='input' name='password' type="password" />
         {

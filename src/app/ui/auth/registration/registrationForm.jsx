@@ -5,7 +5,7 @@ import { useFormState } from 'react-dom'
 
 import { registrationUser } from '@/app/lib/actions'
 
-import Button from '@/app/ui/subcomponents/button/Button'
+import Button from '@/components/ui/button/Button'
 
 export default function RegistrationForm() {
   const initialState = { message: null, errors: {} };

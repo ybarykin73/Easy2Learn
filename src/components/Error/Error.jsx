@@ -2,7 +2,7 @@
 
 import { useEffect } from "react"
 
-import Button from "@/app/ui/subcomponents/button/Button"
+import Button from "@/components/ui/button/Button"
 
 import './Error.css'
 
