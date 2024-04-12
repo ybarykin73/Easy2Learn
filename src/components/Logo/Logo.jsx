@@ -1,7 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import LogoImage from './LogoImage'
+import Image from 'next/image'
+
 import { usePathname } from 'next/navigation'
 
 import './Logo.css'
@@ -16,14 +17,24 @@ export default function Logo() {
           {
             pathname === '/'
             ?
-              <LogoImage alt='alt' />
+              <Image 
+                src={'/Logo.png'}
+                width={30}
+                height={24} 
+                alt='Logo' 
+              />
             : 
               <Link href={'/'}>
-                <LogoImage alt='alt' />
+                <Image 
+                  src={'/Logo.png'}
+                  width={30}
+                  height={24} 
+                  alt='Logo' 
+                />
               </Link>
           }
         </div>
-        <div className='logo__text'>Личный кабинет</div>
+        <div className='logo__text'>Easy2Learn</div>
       </div>
     </div>
   )

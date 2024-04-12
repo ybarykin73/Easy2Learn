@@ -1,4 +1,4 @@
-import Logo from "../../../app/ui/logo/Logo"
+import Logo from "../../Logo/Logo"
 import User from "../../../app/ui/user/User"
 
 import './Header.css'
