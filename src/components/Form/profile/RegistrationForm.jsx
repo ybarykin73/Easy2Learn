@@ -3,13 +3,13 @@
 import clsx from 'clsx'
 import { useFormState } from 'react-dom'
 
-import { registrationUser } from '@/app/lib/actions'
+import { userRegistration } from '@/core/actions/user/userRegistration'
 
 import Button from '@/components/ui/button/Button'
 
 export default function RegistrationForm() {
   const initialState = { message: null, errors: {} };
-  const [state, dispatch] = useFormState(registrationUser, initialState)
+  const [state, dispatch] = useFormState(userRegistration, initialState)
 
   // TODO для поле профиля придумать смену password на text
   return (

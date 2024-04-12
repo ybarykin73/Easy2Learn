@@ -1,8 +1,8 @@
 import Image from 'next/image'
+
 import './AuthLayout.css'
 
-
-export default function AuthLayout({ children }) {
+export default function AuthLayout ({ children }) {
   return (
     <div className="auth">
       <div className='auth__wrapper'>
