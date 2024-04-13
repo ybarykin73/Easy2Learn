@@ -1,4 +1,4 @@
-import Logo from "../../ui/Logo/Logo"
+import Logo from "../Logo/Logo"
 import User from "@/components/views/profile/ProfileUser/ProfileUser"
 
 import './Header.css'
