@@ -8,7 +8,7 @@ export default function Page() {
 
   return (
     <div>
-        <button onClick={() => router.back()}>Вернуться к списку курсов</button>
+      <button onClick={() => router.back()}>Вернуться к списку курсов</button>
     </div>
   )
 }
