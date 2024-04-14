@@ -1,14 +1,16 @@
-'use client'
+'use server'
 
-import { useRouter } from 'next/navigation'
+import CourseCreate from '@/components/views/course/CourseCreate/CourseCreate'
 
-export default function Page() {
+import { getCourse } from '@/core/getways/profile/getCourse'
 
-  const router = useRouter()
+export default async function Page () {
+
+  const course = await getCourse()
 
   return (
     <div>
-      <button onClick={() => router.back()}>Вернуться к списку курсов</button>
+      <CourseCreate course={course} />
     </div>
   )
 }
