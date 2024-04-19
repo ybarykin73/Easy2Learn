@@ -5,7 +5,7 @@ import { useFormState } from 'react-dom'
 
 import Button from "@/components/ui/button/Button"
 
-import { userUpdate } from "@/core/actions/user/userUpdate"
+import userUpdate from "@/core/getways/server/userUpdate"
 
 import './ProfileInfo.css'
 

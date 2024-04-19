@@ -3,7 +3,7 @@
 import clsx from 'clsx'
 import { useFormState } from 'react-dom'
 
-import { userRegistration } from '@/core/actions/user/userRegistration'
+import userRegistration from '@/core/getways/server/userRegistration'
 
 import Button from '@/components/ui/button/Button'
 

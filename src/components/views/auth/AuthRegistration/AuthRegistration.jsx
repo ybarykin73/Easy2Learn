@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import RegistrationForm from "@/components/Form/auth/registration/RegistrationForm"
+import RegistrationForm from "./RegistrationForm"
 
 export default function AuthRegistration () {
   return (

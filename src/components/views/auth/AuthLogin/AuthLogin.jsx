@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import LoginForm from "@/components/Form/auth/login/LoginForm"
+import LoginForm from "./LoginForm"
 
 export default function AuthLogin () {
   return (

@@ -5,7 +5,7 @@ import { useFormState } from 'react-dom'
 import Link from 'next/link'
 import Button from '@/components/ui/button/Button'
 
-import { userLogin } from '@/core/actions/user/userLogin'
+import userLogin from '@/core/getways/server/userLogin'
 
 export default function LoginForm() {
   const [state, dispatch] = useFormState(userLogin, undefined)

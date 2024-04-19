@@ -21,7 +21,7 @@ const FormSchemaR = z.object({
   path: ["confirmPassword"]
 })
 
-export async function userRegistration(prevState, formData) {
+export default async function userRegistration (prevState, formData) {
   const validatedFields = FormSchemaR.safeParse({
     email: formData.get('email'),
     password: formData.get('password'),

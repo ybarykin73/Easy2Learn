@@ -10,7 +10,7 @@ export default function ProfileMenu() {
           <Link href={'/profile'}>Профиль</Link>
         </li>
         <li className="profile-nav__list-item">
-          <Link href={'/profile/tests'}>Мои тесты</Link>
+          <Link href={'/profile/course'}>Мои тесты</Link>
         </li>
       </ul>
     </nav>

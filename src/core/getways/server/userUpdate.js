@@ -2,9 +2,9 @@
 
 import { sql } from '@vercel/postgres';
 import { revalidatePath } from 'next/cache';
-import {permanentRedirect} from 'next/navigation'
+import { permanentRedirect } from 'next/navigation'
 
-export async function userUpdate(id, prevState, formData) {
+export default async function userUpdate (id, prevState, formData) {
 
   const name = formData.get('name')
   const email = formData.get('email')
