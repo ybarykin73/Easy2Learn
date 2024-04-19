@@ -1,0 +1,30 @@
+.button {
+  padding: 10px 15px;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: var(--border-base);
+  cursor: pointer;
+}
+
+.button--primary {
+  color: #fff;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 8px -4px rgba(58, 53, 65, 0.42);
+  transition: background-color .3s ease;
+}
+
+.button--primary:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.button--secondary {
+  color: inherit;
+  box-shadow: 0 0 8px -4px rgba(138, 141, 147, 0.5);
+  transition: background-color .3s ease;
+}
+

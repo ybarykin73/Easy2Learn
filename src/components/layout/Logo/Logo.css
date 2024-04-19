@@ -1,0 +1,12 @@
+.logo__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.logo__text {
+  font-size: 20px;
+  color: var(--heading-color);
+  font-weight: 700;
+}
